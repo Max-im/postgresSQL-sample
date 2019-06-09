@@ -1,0 +1,14 @@
+#!/bin/bash
+
+export PGPASSWORD='password'
+
+db="dbName"
+
+echo "start initing DB $db"
+
+dropdb -U userName dbName
+createdb -U userName dbName
+
+psql -U userName dbName < './bin/sql/monsters.sql'
+
+echo "db $db configured"

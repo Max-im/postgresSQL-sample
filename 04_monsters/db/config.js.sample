@@ -1,0 +1,7 @@
+module.exports = {
+  user: "user",
+  host: "localhost",
+  database: "dbName",
+  password: "password",
+  port: portInt
+};
