@@ -2,7 +2,9 @@ const { Router } = require("express");
 const client = require("../db");
 
 const router = Router();
-
+/**
+ * get all lives
+ */
 router.get("/", (req, res, next) => {
   client
     .query("SELECT * FROM lives")
@@ -10,6 +12,9 @@ router.get("/", (req, res, next) => {
     .catch(err => next(err));
 });
 
+/**
+ * get conditions
+ */
 router.get("/conditions", (req, res, next) => {
   client
     .query("SELECT * FROM lives JOIN habitats ON habitats.name = lives.habitat")
