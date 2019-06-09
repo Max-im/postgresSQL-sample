@@ -1,5 +1,0 @@
-[
-  { "id": 2, "message": "updated message", "number": 5, "animal": "fish" },
-  { "id": 3, "message": "therd message", "number": 3, "animal": "cat" },
-  { "id": 4, "message": "create message", "number": 88, "animal": "cocrouch" }
-]
