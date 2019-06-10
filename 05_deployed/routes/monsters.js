@@ -17,7 +17,6 @@ router.get("/:id", (req, res, next) => {
     .query("SELECT * FROM monsters WHERE id = $1", [req.params.id])
     .then(({ rows }) => res.json(rows))
     .catch(err => next(err));
-  client.end();
 });
 
 // create monster
@@ -55,7 +54,6 @@ router.put("/:id", (req, res, next) => {
       })
       .catch(err => next(err));
   });
-  client.end();
 });
 
 // delete monster by id
